@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" class="sl-theme-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ACpiano - play and chill together</title>
+    <meta name="description" content="ACpiano is a multiplayer piano where you can play and chat with others in real-time.">
+    <meta name="keywords" content="piano, multiplayer, chat, music, real-time, chill, vibes">
+    <meta name="author" content="Ataraxis">
+    <meta name="theme-color" content="#cecece">
+    <meta name="og:title" content="ACpiano - play and chill together">
+    <meta name="og:description" content="ACpiano is a multiplayer piano where you can play and chat with others in real-time.">
+    <meta name="og:image" content="/piano/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link href="/src/style.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+  </head>
+  <body>
+    <div id="mobile-mode">
+      Limited experience.<br />
+      Use a wider screen.
+    </div>
+    <div id="audio-overlay" style="display:none">
+      Click or tap anywhere to enable audio playback
+    </div>
+    <div id="cursors"></div>
+    <div id="wrapper">
+      <div id="privacy"><a href="/piano/privacy.html" target="_blank">privacy</a></div>
+      <div id="room-info"></div>
+      <div id="players"></div>
+      <div id="piano"></div>
+      <div id="chat">
+        <sl-menu id="message-context-menu" class="context-menu" style="display:none">
+          <sl-menu-item id="copy-msg-content">Copy Message Content</sl-menu-item>
+          <sl-divider></sl-divider>
+          <sl-menu-item id="copy-author-uid">Copy Author UID</sl-menu-item>
+          <sl-menu-item id="copy-msg-id">Copy Message ID</sl-menu-item>
+          <sl-menu-item id="delete-msg">Delete Message</sl-menu-item>
+        </sl-menu>
+        <div id="messages"></div>
+        <div class="chatarea">
+          <input type="text" placeholder="Type here to chat..." maxlength="200"></input>
+          <button id="emoji-btn"><img draggable="false" class="emoji" alt="🙂" src="/emojis/32x32/1f642.svg"></button>
+         </div>
+      </div>
+      <div id="toolbar">
+        <div>
+          <div id="status">Connecting...</div>
+          <div id="room-list"></div>
+          <button id="room-selector">Select a room...</button>
+          <button id="new-room" class="tb-btn">New Room</button>
+          <div id="midi-device-list"><h2>MIDI Input</h2>Requesting permission...</div>
+          <button id="midi-devices" class="tb-btn">MIDI Input</button>
+          <button id="room-settings" class="tb-btn" style="display:none">Room Settings</button>
+        </div>
+        <div>
+          <div id="keynames">
+            <sl-switch size="medium">Labels</sl-switch>
+          </div>
+          <div id="sustain">
+            <sl-switch size="medium">Sustain</sl-switch>
+          </div>
+          <div id="volume">
+            <sl-range label="Master Volume" min="0" max="100" value="50" style="--track-color-active: var(--sl-color-primary-600); --track-color-inactive: var(--sl-color-primary-100);"></sl-range>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.all.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
