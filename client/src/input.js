@@ -41,7 +41,7 @@ let lastCursorUpdate = 0;
 let lastmxp = 0;
 let lastmyp = 0;
 let activeMidiInput = null;
-let lVolume = Number(localStorage.getItem("piano_volume"));
+let lVolume = localStorage.getItem("piano_volume");
 lVolume = Number.isNaN(lVolume) ? undefined : lVolume;
 let lShowSelfCursor = localStorage.getItem("piano_showselfcursor") === "true";
 let lSustain = localStorage.getItem("piano_sustain") === "true";
