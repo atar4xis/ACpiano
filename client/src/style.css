@@ -546,14 +546,32 @@ em-emoji-picker {
 
 #privacy {
   position: fixed;
-  top: 0;
-  right: 0;
-  font-size: 0.75rem;
+  top: 3px;
+  right: 3px;
+  font-size: 0.65rem;
   z-index: 100;
 }
 
 #privacy a {
   color: #ccc;
+}
+
+#github {
+  position: fixed;
+  top: 32px;
+  right: 3px;
+  z-index: 100;
+  opacity: 0.65;
+  transition: opacity 0.25s;
+}
+
+#github:hover {
+  opacity: 1;
+}
+
+#github svg {
+  width: 32px;
+  height: 32px;
 }
 
 #audio-overlay {
