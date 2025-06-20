@@ -56,6 +56,10 @@ export const note_binding = Object.fromEntries(
   BASE_KEY_BINDINGS.map(([code, note, offset]) => [note, { code, offset }]),
 );
 
+export function invalidateSelfCursor() {
+  $selfCursor = null;
+}
+
 export function applyTranspose(key) {
   let noteIndex = NOTES.indexOf(key.baseNote);
   if (noteIndex === -1) return;

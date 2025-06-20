@@ -1,6 +1,6 @@
 import { playKey, fadeOutKey } from "./audio.js";
 import { appendChat } from "./chat.js";
-import { bobPlayerEl } from "./input.js";
+import { bobPlayerEl, invalidateSelfCursor } from "./input.js";
 import { keys } from "./piano.js";
 import { bytes, bytesToInt, bytesToShort, truncateTextWidth } from "./utils.js";
 import {
@@ -229,6 +229,8 @@ export async function receive(data) {
       $players.innerHTML = "";
       $cursors.innerHTML = "";
       $messages.innerHTML = "";
+
+      invalidateSelfCursor();
       break;
     }
     case OPCODE.PLAYER_JOINED: {
