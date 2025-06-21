@@ -283,7 +283,7 @@ export function appendChat(msgId, username, message, color, uuid = null) {
       heightAuto: false,
       color: "#cecece",
       width: 600,
-      title: "UUID of " + $name.textContent,
+      titleText: "UUID of " + $name.textContent,
       html: uuid
         ? '<code style="font-size:.8rem;background:#333;padding:3px">' +
           uuid +

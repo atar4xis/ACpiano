@@ -145,7 +145,7 @@ function addPlayer(player) {
         heightAuto: false,
         color: "#cecece",
         width: 600,
-        title: "UUID of " + $player.textContent,
+        titleText: "UUID of " + $player.textContent,
         html: player.uuid
           ? '<code style="font-size:.8rem;background:#333;padding:3px">' +
             player.uuid +
