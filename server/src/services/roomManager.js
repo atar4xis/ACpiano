@@ -34,7 +34,7 @@ export function createRoom(roomName, ownerWs, persistent, hidden) {
   if (persistent) {
     getChatHistoryFromDb(roomName).then(async (rows) => {
       const chatMessages = [];
-      for (const row of rows) {
+      for (const row of rows.reverse()) {
         chatMessages.push([row.client_uuid, row.uid, row.content, row.color]);
       }
       rooms[roomName].chat = chatMessages;

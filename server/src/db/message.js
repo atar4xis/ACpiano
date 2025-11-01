@@ -20,7 +20,7 @@ export async function deleteMessageFromDb(uid) {
 
 export async function getChatHistoryFromDb(roomName) {
   return await dbAll(
-    `SELECT * FROM messages WHERE room_name = ? ORDER BY timestamp ASC LIMIT ${MAX_CHAT_HISTORY}`,
+    `SELECT * FROM messages WHERE room_name = ? ORDER BY timestamp DESC LIMIT ${MAX_CHAT_HISTORY}`,
     [roomName],
   );
 }
