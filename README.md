@@ -2,8 +2,6 @@
 
 **ACpiano** is a real-time multiplayer web piano where you can play and chat with people all around the world. ACpiano lets multiple users play and hear piano notes in real time, with low latency and synchronized visuals.
 
-You can try ACpiano live at [ataraxis.codes/piano](https://ataraxis.codes/piano/)
-
 ## Features
 
 - 🎹 **Real-time Piano** - Play notes instantly with others in shared virtual rooms.
